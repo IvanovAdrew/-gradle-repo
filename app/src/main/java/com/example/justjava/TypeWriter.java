@@ -35,4 +35,7 @@ public class TypeWriter extends android.support.v7.widget.AppCompatTextView {
     public void setCharacterDelay(long m) {
         mDelay = m;
     }
+    public String  BMW (String str){
+        return str+"im THE BMW";
+    }
 }
