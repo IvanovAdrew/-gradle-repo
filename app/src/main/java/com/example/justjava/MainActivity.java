@@ -3,6 +3,8 @@ package com.example.justjava;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -22,34 +24,45 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mainTextView = (TextView) findViewById(R.id.mainTextView);
+        final TypeWriter tw = (TypeWriter) findViewById(R.id.tv);// зачем он final?
 
-        String nameKitten = getIntent().getExtras().getString("name_cat1");
+       /* String nameKitten = getIntent().getExtras().getString("name_cat1");
         int ageKitten = getIntent().getExtras().getInt("age_cat1");
         String namingDog1 = getIntent().getExtras().getString("name_dog1");
         int ageDog1 = getIntent().getExtras().getInt("age_dog1");
         String namingDog2 = getIntent().getExtras().getString("name_dog2");
         int ageDog2 = getIntent().getExtras().getInt("age_dog2");
 
-        Animal c = new Cat(ageKitten,nameKitten);
-        Animal d1 = new Dog(ageDog1,namingDog1);
-        Animal d2= new Dog(ageDog2,namingDog2);
+        Animal c = new Cat(ageKitten, nameKitten);
+        Animal d1 = new Dog(ageDog1, namingDog1);
+        Animal d2 = new Dog(ageDog2, namingDog2);
 
         story.add("А вот тепееееерь");
         story.add(c.Life());
         story.add(d1.Life());
         story.add(d2.Life());
-        story.add("И начнем мы с того что как-то раз "+ namingDog1+ " и "+ namingDog2 +" игрались во дворе");
+        story.add("И начнем мы с того что как-то раз " + namingDog1 + " и " + namingDog2 + " игрались во дворе");
         story.add("в один момент они увидели кошака который бежал куда-то ");
         story.add("собсна они конечно-же побежали за ним");
         story.add("ну и они прибежали к дереву как и все нормальные собаки со всеми нормальными котами");
-        story.add("ну а потом что-то пошло реально не так и они узнали что кошака зовут " + nameKitten+ " и это вообще-то котейка");
-        story.add("потом они узнали её возраст "+ ageKitten+" ну и поняли что собаки по возроасту живут вроде дольше");
-        story.add("но жизней же у котов больше, так что фиг его знает кто в выиграше");//+ я хочу спать + геомку ещё сделать надо +сейчас час ночи(когда доделал то уже 2), крч потом допишу эту сверх скучную или нет историю
-
+        story.add("ну а потом что-то пошло реально не так и они узнали что кошака зовут " + nameKitten + " и это вообще-то котейка");
+        story.add("потом они узнали её возраст " + ageKitten + " ну и поняли что собаки по возроасту живут вроде дольше");
+        story.add("но жизней же у котов больше, так что фиг его знает кто в выиграше");//+ я хочу спать + геомку ещё сделать надо +сейчас час ночи(когда доделал то уже 2), крч потом допишу эту сверх скучную или нет историю*/
+        Button btn = (Button) findViewById(R.id.btn);
+       /* btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tw.setText("");
+                tw.setCharacterDelay(150);
+                tw.animateText("Type Writer Effect");
+            }
+        });*/
     }
+}
 
-  private Runnable mUpdateTimeTask1 = new Runnable() {
+
+
+ /* private Runnable mUpdateTimeTask1 = new Runnable() {
       @Override
       public void run() {
 
@@ -89,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
         Timer(story);
     }
-}
+}*/
       /*
           public void run() {
               for (int i = 0; i < text.size(); i++) {
