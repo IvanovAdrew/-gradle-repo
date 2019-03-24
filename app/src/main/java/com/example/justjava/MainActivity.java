@@ -53,8 +53,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 tw.setText("");
-                tw.setCharacterDelay(150);
-                tw.animateText("Type Writer Effect");
+                tw.setCharacterDelay(100);
+                //tw.animateText("Type Writer Effect");
+                tw.animateListOfText(story);
             }
         });
     }
