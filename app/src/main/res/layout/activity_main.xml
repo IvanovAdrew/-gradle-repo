@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         />
 
-    <com.ssaurel.typewriter.TypeWriter
+    <com.example.justjava.TypeWriter
         android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -22,7 +22,7 @@ public class Question5 extends AppCompatActivity {
         Intent a = new Intent(this,MainActivity.class);
         Intent i = new Intent(this,Question6.class);
         valueOfText5 = editText5.getText().toString();
-        a.putExtra("name_cat2",valueOfText5);
+        a.putExtra("name_dog2",valueOfText5);
         startActivity(i);
 
     }

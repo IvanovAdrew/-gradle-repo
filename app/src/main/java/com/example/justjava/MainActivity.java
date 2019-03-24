@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         final TypeWriter tw = (TypeWriter) findViewById(R.id.tv);// зачем он final?
 
-       /* String nameKitten = getIntent().getExtras().getString("name_cat1");
+        String nameKitten = getIntent().getExtras().getString("name_cat1");
         int ageKitten = getIntent().getExtras().getInt("age_cat1");
         String namingDog1 = getIntent().getExtras().getString("name_dog1");
         int ageDog1 = getIntent().getExtras().getInt("age_dog1");
@@ -47,18 +47,63 @@ public class MainActivity extends AppCompatActivity {
         story.add("ну и они прибежали к дереву как и все нормальные собаки со всеми нормальными котами");
         story.add("ну а потом что-то пошло реально не так и они узнали что кошака зовут " + nameKitten + " и это вообще-то котейка");
         story.add("потом они узнали её возраст " + ageKitten + " ну и поняли что собаки по возроасту живут вроде дольше");
-        story.add("но жизней же у котов больше, так что фиг его знает кто в выиграше");//+ я хочу спать + геомку ещё сделать надо +сейчас час ночи(когда доделал то уже 2), крч потом допишу эту сверх скучную или нет историю*/
+        story.add("но жизней же у котов больше, так что фиг его знает кто в выиграше");//+ я хочу спать + геомку ещё сделать надо +сейчас час ночи(когда доделал то уже 2), крч потом допишу эту сверх скучную или нет историю
         Button btn = (Button) findViewById(R.id.btn);
-       /* btn.setOnClickListener(new View.OnClickListener() {
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 tw.setText("");
                 tw.setCharacterDelay(150);
                 tw.animateText("Type Writer Effect");
             }
-        });*/
+        });
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

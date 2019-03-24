@@ -24,7 +24,7 @@ public class Question4 extends AppCompatActivity {
         Intent i = new Intent(this,Question5.class);
         valueOfText4 = editText4.getText().toString();
         age4 =Integer.parseInt(valueOfText4);
-        a.putExtra("age_cat1",age4);
+        a.putExtra("age_dog1",age4);
         startActivity(i);
     }
     }

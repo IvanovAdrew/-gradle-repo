@@ -21,9 +21,9 @@ public class Question6 extends AppCompatActivity {
     }
     public void btnClickQuest6(View v){
         Intent a = new Intent(this,MainActivity.class);
-        /*valueOfText6 = editText6.getText().toString();
+        valueOfText6 = editText6.getText().toString();
         age6 =Integer.parseInt(valueOfText6);
-        a.putExtra("age_cat2",age6);*/
+        a.putExtra("age_dog2",age6);
         startActivity(a);
         //editText
 
