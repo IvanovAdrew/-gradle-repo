@@ -19,10 +19,14 @@ public class Question5 extends AppCompatActivity {
         editText5 = (EditText) findViewById(R.id.editText);
     }
     public void btnClickQuest5(View v){
-        Intent a = new Intent(this,MainActivity.class);
         Intent i = new Intent(this,Question6.class);
         valueOfText5 = editText5.getText().toString();
-        a.putExtra("name_dog2",valueOfText5);
+        i.putExtra("name_dog1",getIntent().getExtras().getString("name_dog1"));
+        i.putExtra("age_cat1",getIntent().getExtras().getInt("age_cat1"));
+        i.putExtra("name_cat1", getIntent().getExtras().getString("name_cat1"));
+        i.putExtra("age_dog1",getIntent().getExtras().getInt("age_dog1"));
+        i.putExtra("name_dog2",valueOfText5);
+
         startActivity(i);
 
     }

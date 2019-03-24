@@ -20,11 +20,11 @@ public class Question2 extends AppCompatActivity {
         editText2 = (EditText) findViewById(R.id.editText);
     }
     public void btnClickQuest2(View v){
-        Intent a = new Intent(this,MainActivity.class);
         Intent i = new Intent(this,Question3.class);
         valueOfText2 = editText2.getText().toString();
         age2 =Integer.parseInt(valueOfText2);
-        a.putExtra("age_cat1",valueOfText2);
+        i.putExtra("age_cat1",age2);
+        i.putExtra("name_cat1", getIntent().getExtras().getString("name_cat1"));
         startActivity(i);
     }
 }

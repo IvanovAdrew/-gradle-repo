@@ -20,11 +20,14 @@ public class Question4 extends AppCompatActivity {
         editText4 = (EditText) findViewById(R.id.editText);
     }
     public void btnClickQuest4(View v){
-        Intent a = new Intent(this,MainActivity.class);
         Intent i = new Intent(this,Question5.class);
         valueOfText4 = editText4.getText().toString();
         age4 =Integer.parseInt(valueOfText4);
-        a.putExtra("age_dog1",age4);
+        i.putExtra("name_dog1",getIntent().getExtras().getString("name_dog1"));
+        i.putExtra("age_cat1",getIntent().getExtras().getInt("age_cat1"));
+        i.putExtra("name_cat1", getIntent().getExtras().getString("name_cat1"));
+        i.putExtra("age_dog1",age4);
+
         startActivity(i);
     }
     }

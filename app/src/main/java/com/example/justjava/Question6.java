@@ -23,6 +23,11 @@ public class Question6 extends AppCompatActivity {
         Intent a = new Intent(this,MainActivity.class);
         valueOfText6 = editText6.getText().toString();
         age6 =Integer.parseInt(valueOfText6);
+        a.putExtra("name_dog1",getIntent().getExtras().getString("name_dog1"));
+        a.putExtra("age_cat1",getIntent().getExtras().getInt("age_cat1"));
+        a.putExtra("name_cat1", getIntent().getExtras().getString("name_cat1"));
+        a.putExtra("age_dog1",getIntent().getExtras().getInt("age_dog1"));
+        a.putExtra("name_dog2",getIntent().getExtras().getString("name_dog2"));
         a.putExtra("age_dog2",age6);
         startActivity(a);
         //editText

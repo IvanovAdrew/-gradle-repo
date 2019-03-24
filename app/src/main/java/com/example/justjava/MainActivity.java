@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         int ageKitten = getIntent().getExtras().getInt("age_cat1");
         String namingDog1 = getIntent().getExtras().getString("name_dog1");
         int ageDog1 = getIntent().getExtras().getInt("age_dog1");
-        String namingDog2 = getIntent().getExtras().getString("name_dog2");
+        String namingDog2 = getIntent().getExtras().getString("name_dog2");//name_dog2
         int ageDog2 = getIntent().getExtras().getInt("age_dog2");
 
         Animal c = new Cat(ageKitten, nameKitten);
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         story.add("собсна они конечно-же побежали за ним");
         story.add("ну и они прибежали к дереву как и все нормальные собаки со всеми нормальными котами");
         story.add("ну а потом что-то пошло реально не так и они узнали что кошака зовут " + nameKitten + " и это вообще-то котейка");
-        story.add("потом они узнали её возраст " + ageKitten + " ну и поняли что собаки по возроасту живут вроде дольше");
+        story.add("потом они узнали её возраст " + ageKitten + " ну и поняли что собаки по возрасту живут вроде дольше");
         story.add("но жизней же у котов больше, так что фиг его знает кто в выиграше");//+ я хочу спать + геомку ещё сделать надо +сейчас час ночи(когда доделал то уже 2), крч потом допишу эту сверх скучную или нет историю
         Button btn = (Button) findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {
