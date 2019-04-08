@@ -38,7 +38,7 @@ public class TypeWriter extends android.support.v7.widget.AppCompatTextView {
         @Override
         public void run() {
 
-            if (mTextIndex <=mListText.size()) {
+            if (mTextIndex <mListText.size()) {
                 mText = (CharSequence) mListText.get(mTextIndex);
                 mTextIndex++;
                 mHandler.postDelayed(symbolAdder, mLongDelay);
@@ -57,11 +57,13 @@ public class TypeWriter extends android.support.v7.widget.AppCompatTextView {
     private Runnable symbolAdder = new Runnable() {
         @Override
         public void run() {
-            setText(mText.subSequence(0, mIndex++));
-            if (mIndex <= mText.length()) {
+            String localVariable = String.valueOf((mText.charAt(mIndex++)));
+            append(localVariable);
+            if (mIndex < mText.length()) {
                 mHandler.postDelayed(symbolAdder, mDelay);
             } else {
                 mIndex = 0;
+                append(System.getProperty("line.separator"));
                 mHandler.postDelayed(textAdder,mDelay);
             }
         }
@@ -77,11 +79,7 @@ public class TypeWriter extends android.support.v7.widget.AppCompatTextView {
     }
 
     public void animateListOfText(List<String> bigText) {
-        /*setText("");
-        mHandler.removeCallbacks(characterAdder);
-       */
             mListText = bigText;
-            //mText = bigText.get(j);
             mTextIndex = 0;
             mIndex = 0;
             mHandler.postDelayed(textAdder, mDelay);
@@ -90,6 +88,9 @@ public class TypeWriter extends android.support.v7.widget.AppCompatTextView {
 
         public void setCharacterDelay(long m) {
             mDelay = m;
+        }
+        public void setTextDelay(long m){
+            mLongDelay = m;
         }
 }
 
